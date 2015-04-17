@@ -49,6 +49,7 @@ strong, b {
 .menubutton {
   display: block;
   position: fixed;
+  z-index: 1;
   right: 7vw;
   top: 7vw;
   width: 18px;
@@ -62,6 +63,14 @@ strong, b {
     cursor: url("../img/i.png") 20 20, auto;
     transform: scale(2) translateZ(0px);
     opacity: 1; }
+
+.active {
+  background: #ff3b3b; }
+
+.active:hover {
+  cursor: url("../img/i-w.png") 20 20, auto;
+  transform: scale(2) translateZ(0px);
+  opacity: 1; }
 
 .intro {
   display: block;
@@ -96,7 +105,9 @@ strong, b {
 .events {
   padding: 80px 0 50vh 0; }
   .events .event {
-    padding: 0vw 7vw 0vw 7vw;
+    display: block;
+    padding: 0vw 0vw 0vw 7vw;
+    width: 70%;
     overflow: auto;
     color: #ff3b3b;
     -webkit-font-smoothing: antialiased;
@@ -108,7 +119,7 @@ strong, b {
     .events .event a {
       display: block;
       text-decoration: none;
-      width: 40%;
+      width: 60%;
       transition: all cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
       padding-bottom: 80px;
       color: black; }
@@ -119,7 +130,10 @@ strong, b {
       .events .event a .category {
         display: inline-block;
         border-bottom: 5px solid black;
-        margin-bottom: 3px; }
+        margin-bottom: 3px;
+        position: relative;
+        z-index: 9999;
+        transition: all cubic-bezier(0.77, 0, 0.175, 1) 0.3s; }
       .events .event a .title {
         display: block; }
       .events .event a .date {

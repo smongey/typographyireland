@@ -35,12 +35,6 @@ app.controller('AppCtrl', ['$scope', function($scope){
 }]);
 
 
-app.factory('inFo', function() {
-	$http.get('/events.json', function(){
-
-	});
-});
-
 Pace.on('done', function(){
 	console.log('fired');
 	$('#wrap').removeClass('hidden');
@@ -49,9 +43,11 @@ Pace.on('done', function(){
 	},200);
 });
 
+
 $('.event').on('click', function(){
 	$(this).toggleClass('open');
 });
+
 
 $('.intro').on('click', function(){
 	$('html, body').animate({
@@ -59,6 +55,18 @@ $('.intro').on('click', function(){
     }, 600, "easeOutExpo");
 });
 
+
 $(window).on('scroll', function(e){
-	console.log(e.currentTarget);
+	var scrollPoint = e.currentTarget.pageYOffset;
+	var introHeight = $('.intro').outerHeight();
+	var newHeight = introHeight - 90;
+	if (scrollPoint > newHeight) {
+		$('.menubutton').addClass('active');
+	} else {
+		$('.menubutton').removeClass('active');
+	}
 });
+
+
+
+
