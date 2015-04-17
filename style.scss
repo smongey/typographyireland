@@ -1,14 +1,26 @@
 // Styles
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+@font-face {
+  font-family: 'Deckard-Bold';
+  src: url('../fonts/Deckard-Bold.eot');
+  src: url('../fonts/Deckard-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Deckard-Bold.woff') format('woff'),
+       url('../fonts/Deckard-Bold.ttf')  format('truetype'),
+       url('../fonts/Deckard-Bold.svg#3682e6ea26a3c7e02bad5d07e55fe7de') format('svg');
+  font-style: normal;
+  font-weight: 700;
+}
+
 $col: #ff3b3b;
-$font: "ff-spinoza-web-pro", serif;
+$serif: "ff-spinoza-web-pro", serif;
+$sans: "Deckard-Bold", serif;
 $soft: cubic-bezier(0.770, 0.000, 0.175, 1.000);
 
 $phone: 480px;
 $tablet: 800px;
 
-body, html { font: 22px/25px $font; }
+body, html { font: 22px/25px $serif; }
 em, i { font-style: italic; }
 strong, b { font-weight: 700; }
 ::-moz-selection { background: $col; color: white; }
@@ -23,21 +35,57 @@ strong, b { font-weight: 700; }
 	margin-top: -20px;
 }
 
+.menu {
+	display: none;
+	
+	ul {
+		padding: 30px 0;
+		li {
+			list-style-type: none;
+			display: inline;
+			padding: 0 10px 0 0;
+			a {
+				text-decoration: none;
+				color: white; 
+				font: 17px/20px $sans;
+			}
+		}
+	}
+
+}
+
+.menubutton {
+	display: block; 
+	position: fixed;
+	right: 7vw;
+	top: 7vw;
+	width: 18px;
+	height: 18px;
+	border-radius: 9px;
+	background: white;
+	transition: all $soft .3s;
+	animation: popHover .5s infinite;
+	animation-play-state: paused; 
+	&:hover {
+		cursor: url('../img/i.png') 20 20, auto;
+		transform: scale(2) translateZ(0px);
+		opacity: 1;
+	}
+}
+
+
+
 .intro {
-	padding: 6vw 35vw 8vw 4vw;
+	display: block;
+	padding: 6vw 30vw 8vw 7vw;
 	background: transparent;
 	color: white;
+	height: 600px;
 	-webkit-font-smoothing: antialiased;
-	min-height: 70vh;
-	@media (max-width: $phone) {
-		padding: 5vw;
-		min-height: 100vh;
-	}
 	h2 {
-		font: 36px/43px $font;
-		letter-spacing: -0.5px;
+		font: 34px/43px $sans;
 		@media (max-width: $phone) { 
-			font: 32px/40px $font;
+			font: 32px/40px $serif;
 		}
 		span {
 			position: relative;
@@ -64,170 +112,44 @@ strong, b { font-weight: 700; }
 }
 
 .events {
+	padding: 80px 0 50vh 0; 
 	.event {
-		padding: 6vw 4vw;
+		padding: 0vw 7vw 0vw 7vw;
 		overflow: auto;
 		color: $col;
 		-webkit-font-smoothing: antialiased;
 		transition: all $soft .5s;
-		max-height: 300px;
 		overflow: hidden;
 		//border-bottom: 1px solid lighten($col, 35%);
 		cursor: pointer;
 		position: relative;
-		.grad {
-			position: absolute; 
-			height: 100px;
-			left: 0; right: 0;
-			bottom: 0;
-			background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 100%);
-			transition: all $soft .5s;
-		}
-		&:active, &:hover {
-			background: lighten($col, 35%);
-			.right a {
-				margin-left: 0px;
-			}
-		}
-		li {
-			list-style-type: none;
-		}
-		.left {
-			float: left;
-			width: 45%;
-			font: 20px/25px $font;
-			@media (max-width: $phone) {  
-				padding: 0;
-				width: 100%;
-			}
-		}
-		.right {
-			float: left;
-			width: 55%;
-			padding-right: 4vw;
-			padding-left: 80px;
-			@media (max-width: $phone) {  
-				padding: 0 0 50px 0;
-				width: 100%;
-			}
-			p {
-				font: 20px/25px $font;
-				margin-bottom: 25px;
-				&:first-child {
-					font: 24px/28px $font;
-					margin-left: -80px;
-					margin-bottom: 35px;
-					@media (max-width: $phone) {
-						margin: 0 0 25px 0;
-						font: 20px/25px $font;
-					}
-				}
-				span {
-					font-weight: 700;
-				}
-				a {
-					color: $col;
-					position: relative;
-					text-decoration: none;
-					&:after {
-					content: '';
-					width: 100%;
-					height: 1px;
-					display: block;
-					background: $col;
-					left: 0;
-					position: absolute;
-					margin-top: -2px;
-					transition: all $soft .5s;
-					}
-					&:hover {
-						cursor: pointer;
-						&:after {
-							height: 4px;
-							margin-top: -2px;
-							background: lighten($col, 100%);
-						}
-					}
-				}
-			}
-			& > a {
-				text-decoration: none;
-				background: white;
-				color: $col;
-				font: 700 20px/25px $font;
-				padding: 10px;
-				display: inline-block;
-				margin-bottom: 20px;
-				margin-left: -10px;
-				transition: all $soft .5s;
-				&:hover {
-					background: $col;
-					color: white;
-				}
-			}
-		}
-		.title {
-			padding-bottom: 550px;
-			@media (max-width: $phone) {
-				padding-bottom: 20px;
-			}
-			h1 {
-				display: inline-block;
-				border-bottom: 1px solid $col;
-			}
-			h1, h2 {
-				text-transform: uppercase;
-				font: 700 18px/22px $font;
-				letter-spacing: 1.5px;
-			}
-			h2 {
-				padding-top: 10px;
-				color:lighten($col, 20%);
-			}
-		}
-		.panel {
-			padding-left: 120px;
+		font-feature-settings: "onum";
+		a {
+			display: block;
+			text-decoration: none;
+			width: 40%;
+			transition: all $soft .3s;
 			padding-bottom: 80px;
-			@media (max-width: $phone) {
-				display: none;
-			}
-			li:first-child {
-				font-weight: 700;
-			}
-		}
-		.details {
-			padding-left: 30px;
-			padding-right: 100px;
-			@media (max-width: $phone) {
-				display: none;
-			}
-			a {
-				text-decoration: none;
-				color: $col;
-			}
-			li {
-				padding-bottom: 30px;
-				span {
-					font-style: italic;
-					display: block;
-				}
-			}
-			.icon {
-				width: 20px;
-				height: 20px;
-				position: absolute;
-				margin-top: 50px;
-				margin-left: -30px;
-				opacity: 0;
+			color: black;
+			h3 {
+				font-weight: normal;
+				font: 34px/39px $sans;
 				transition: all $soft .3s;
 			}
-			li:last-child:hover {
-				.icon {
-					opacity: 1;
-				}
+			.category {
+				display: inline-block;
+				border-bottom: 5px solid black;
+				margin-bottom: 3px;
+			}
+			.title {
+				display: block;
+			}
+			.date {
+				font: 36px/39px $serif;
+				transition: all .3s $soft .3s;
+				-webkit-font-feature-settings: 'onum';
 			}
 		}
-
 	}
 	.dim {
 		background: transparent !important;
@@ -248,7 +170,7 @@ strong, b { font-weight: 700; }
 	padding: 6vw 4vw;
 	overflow: auto;
 	ul {
-		float: right;
+		float: left;
 		width: 55%;
 		@media (max-width: $phone) {
 			width: 100%;
@@ -302,8 +224,8 @@ strong, b { font-weight: 700; }
 	position: absolute;
 	z-index: -1;
 	top: 0;
+	height: 600px;
 	right: 100%;
-	min-height: 70vh;
 	width: 100%;
 	@media (max-width: $phone) {
 		min-height: 100vh;
