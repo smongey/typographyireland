@@ -5,8 +5,8 @@
 
 @font-face {
   font-family: 'Deckard-Bold';
-  src: url(".././fonts/Deckard-Bold.eot");
-  src: url(".././fonts/Deckard-Bold.eot?#iefix") format("embedded-opentype"), url(".././fonts/Deckard-Bold.woff") format("woff"), url(".././fonts/Deckard-Bold.ttf") format("truetype"), url(".././fonts/Deckard-Bold.svg#3682e6ea26a3c7e02bad5d07e55fe7de") format("svg");
+  src: url("fonts/Deckard-Bold.eot");
+  src: url("fonts/Deckard-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Deckard-Bold.woff") format("woff"), url("fonts/Deckard-Bold.ttf") format("truetype"), url("fonts/Deckard-Bold.svg#3682e6ea26a3c7e02bad5d07e55fe7de") format("svg");
   font-style: normal;
   font-weight: 700; }
 body, html {
@@ -37,11 +37,20 @@ strong, b {
   opacity: 0;
   pointer-events: none;
   position: fixed;
-  right: -10px;
-  top: 15vw;
+  right: 0px;
+  margin-right: -20px;
+  top: 190px;
   z-index: 1;
   transform: rotate(90deg);
   transition: all cubic-bezier(0.77, 0, 0.175, 1) 0.3s; }
+  @media (max-width: 820px) {
+    .menu {
+      margin-right: -50px;
+      top: 150px; } }
+  @media (max-width: 480px) {
+    .menu {
+      margin-right: -70px;
+      top: 140px; } }
   .menu ul {
     padding: 30px 0; }
     .menu ul li {
@@ -56,8 +65,14 @@ strong, b {
   .menu.open {
     display: block;
     opacity: 1;
-    top: 16vw;
+    top: 200px;
     pointer-events: auto; }
+    @media (max-width: 820px) {
+      .menu.open {
+        top: 160px; } }
+    @media (max-width: 820px) {
+      .menu.open {
+        top: 150px; } }
   .menu.active ul li a {
     color: #ff3b3b; }
 
@@ -65,8 +80,8 @@ strong, b {
   display: block;
   position: fixed;
   z-index: 1;
-  right: 7vw;
-  top: 7vw;
+  right: 80px;
+  top: 80px;
   width: 18px;
   height: 18px;
   border-radius: 9px;
@@ -74,20 +89,28 @@ strong, b {
   transition: all cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
   animation: popHover .5s infinite;
   animation-play-state: paused; }
+  @media (max-width: 820px) {
+    .menubutton {
+      top: 50px;
+      right: 50px; } }
+  @media (max-width: 480px) {
+    .menubutton {
+      top: 30px;
+      right: 30px; } }
   .menubutton:hover {
-    cursor: url("./img/i.png") 20 20, auto;
+    cursor: url("img/i.png") 20 20, auto;
     transform: scale(2) translateZ(0px);
     opacity: 1; }
   .menubutton.active {
     background: #ff3b3b; }
   .menubutton.active:hover {
-    cursor: url("./img/i-w.png") 20 20, auto;
+    cursor: url("img/i-w.png") 20 20, auto;
     transform: scale(2) translateZ(0px);
     opacity: 1; }
 
 .intro {
   display: block;
-  padding: 6vw 30vw 8vw 7vw;
+  padding: 6vw 25vw 8vw 7vw;
   background: transparent;
   color: white;
   height: 600px;
@@ -98,6 +121,9 @@ strong, b {
       height: 400px; } }
   .intro h2 {
     font: 34px/43px "Deckard-Bold", serif; }
+    @media (max-width: 820px) {
+      .intro h2 {
+        font: 28px/36px "Deckard-Bold", serif; } }
     @media (max-width: 480px) {
       .intro h2 {
         font: 20px/26px "Deckard-Bold", serif; } }
@@ -136,6 +162,9 @@ strong, b {
     @media (max-width: 480px) {
       .events .event {
         width: 100%; } }
+    @media (max-width: 820px) {
+      .events .event {
+        width: 90%; } }
     @media (min-width: 480px) {
       .events .event:hover span.category {
         margin-left: 10px; }
@@ -146,13 +175,10 @@ strong, b {
     .events .event a {
       display: block;
       text-decoration: none;
-      width: 60%;
+      width: 100%;
       transition: all cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
       padding-bottom: 80px;
       color: black; }
-      @media (max-width: 480px) {
-        .events .event a {
-          width: 100%; } }
       .events .event a h3 {
         font-weight: normal;
         font: 34px/39px "Deckard-Bold", serif;
@@ -176,7 +202,7 @@ strong, b {
         -webkit-font-feature-settings: 'onum'; }
         @media (max-width: 480px) {
           .events .event a .date {
-            font: 30px/36px "Deckard-Bold", serif; } }
+            font: 30px/36px "ff-spinoza-web-pro", serif; } }
   .events .dim {
     background: transparent !important; }
   .events .conceal {
@@ -235,6 +261,9 @@ strong, b {
   height: 600px;
   right: 100%;
   width: 100%; }
+  @media (max-width: 820px) {
+    .pace .pace-progress {
+      height: 600px; } }
   @media (max-width: 480px) {
     .pace .pace-progress {
       height: 400px; } }

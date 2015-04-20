@@ -3,11 +3,11 @@
 
 @font-face {
   font-family: 'Deckard-Bold';
-  src: url('.././fonts/Deckard-Bold.eot');
-  src: url('.././fonts/Deckard-Bold.eot?#iefix') format('embedded-opentype'),
-       url('.././fonts/Deckard-Bold.woff') format('woff'),
-       url('.././fonts/Deckard-Bold.ttf')  format('truetype'),
-       url('.././fonts/Deckard-Bold.svg#3682e6ea26a3c7e02bad5d07e55fe7de') format('svg');
+  src: url('fonts/Deckard-Bold.eot');
+  src: url('fonts/Deckard-Bold.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Deckard-Bold.woff') format('woff'),
+       url('fonts/Deckard-Bold.ttf')  format('truetype'),
+       url('fonts/Deckard-Bold.svg#3682e6ea26a3c7e02bad5d07e55fe7de') format('svg');
   font-style: normal;
   font-weight: 700;
 }
@@ -18,7 +18,7 @@ $sans: "Deckard-Bold", serif;
 $soft: cubic-bezier(0.770, 0.000, 0.175, 1.000);
 
 $phone: 480px;
-$tablet: 800px;
+$tablet: 820px;
 
 body, html { font: 22px/25px $serif; }
 em, i { font-style: italic; }
@@ -39,11 +39,20 @@ strong, b { font-weight: 700; }
 	opacity: 0;
 	pointer-events: none;
 	position: fixed;
-	right: -10px;
-	top: 15vw;
+	right: 0px;
+	margin-right: -20px;
+	top: 190px;
 	z-index: 1;
 	transform: rotate(90deg);
 	transition: all $soft .3s;
+	@media (max-width: $tablet) {
+		margin-right: -50px;
+		top: 150px;
+	}
+	@media (max-width: $phone) {
+		margin-right: -70px;
+		top: 140px;
+	}
 	ul {
 		padding: 30px 0;
 		li {
@@ -61,8 +70,14 @@ strong, b { font-weight: 700; }
 	&.open {
 		display: block;
 		opacity: 1;
-		top: 16vw;
+		top: 200px;
 		pointer-events: auto;
+		@media (max-width: $tablet) {
+			top: 160px;
+		}
+		@media (max-width: $tablet) {
+			top: 150px;
+		}
 	}
 	&.active {
 		ul li a {
@@ -75,8 +90,8 @@ strong, b { font-weight: 700; }
 	display: block; 
 	position: fixed;
 	z-index: 1;
-	right: 7vw;
-	top: 7vw;
+	right: 80px;
+	top: 80px;
 	width: 18px;
 	height: 18px;
 	border-radius: 9px;
@@ -84,8 +99,16 @@ strong, b { font-weight: 700; }
 	transition: all $soft .3s;
 	animation: popHover .5s infinite;
 	animation-play-state: paused; 
+	@media (max-width: $tablet) { 
+		top: 50px;
+		right: 50px;
+	}
+	@media (max-width: $phone) { 
+		top: 30px;
+		right: 30px;
+	}
 	&:hover {
-		cursor: url('./img/i.png') 20 20, auto;
+		cursor: url('img/i.png') 20 20, auto;
 		transform: scale(2) translateZ(0px);
 		opacity: 1;
 	}
@@ -93,7 +116,7 @@ strong, b { font-weight: 700; }
 		background: $col;
 	}
 	&.active:hover {
-		cursor: url('./img/i-w.png') 20 20, auto;
+		cursor: url('img/i-w.png') 20 20, auto;
 		transform: scale(2) translateZ(0px);
 		opacity: 1;
 	}
@@ -101,7 +124,7 @@ strong, b { font-weight: 700; }
 
 .intro {
 	display: block;
-	padding: 6vw 30vw 8vw 7vw;
+	padding: 6vw 25vw 8vw 7vw;
 	background: transparent;
 	color: white;
 	height: 600px;
@@ -112,9 +135,13 @@ strong, b { font-weight: 700; }
 	}
 	h2 {
 		font: 34px/43px $sans;
+		@media (max-width: $tablet) {
+			font: 28px/36px $sans;
+		}
 		@media (max-width: $phone) { 
 			font: 20px/26px $sans;
 		}
+
 		span {
 			position: relative;
 			&:after {
@@ -156,6 +183,9 @@ strong, b { font-weight: 700; }
 		@media (max-width: $phone) {
 			width: 100%;
 		}
+		@media (max-width: $tablet) {
+			width: 90%;
+		}
 		@media (min-width: $phone) {
 			&:hover {
 				// padding-left: 8vw;
@@ -173,13 +203,10 @@ strong, b { font-weight: 700; }
 		a {
 			display: block;
 			text-decoration: none;
-			width: 60%;
+			width: 100%;
 			transition: all $soft .3s;
 			padding-bottom: 80px;
 			color: black;
-			@media (max-width: $phone) {
-				width: 100%;
-			}
 			h3 {
 				font-weight: normal;
 				font: 34px/39px $sans;
@@ -205,7 +232,7 @@ strong, b { font-weight: 700; }
 				transition: all $soft .3s;
 				-webkit-font-feature-settings: 'onum';
 				@media (max-width: $phone) {
-					font: 30px/36px $sans;
+					font: 30px/36px $serif;
 				}
 			}
 		}
@@ -267,15 +294,14 @@ strong, b { font-weight: 700; }
 }
 
 .pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+	-webkit-pointer-events: none;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
 
-.pace-inactive {
-}
+.pace-inactive { }
 
 .pace .pace-progress {
 	background-color: $col;
@@ -285,6 +311,9 @@ strong, b { font-weight: 700; }
 	height: 600px;
 	right: 100%;
 	width: 100%;
+	@media (max-width: $tablet) {
+		height: 600px;
+	}
 	@media (max-width: $phone) {
 		height: 400px;
 	}
