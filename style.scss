@@ -3,11 +3,11 @@
 
 @font-face {
   font-family: 'Deckard-Bold';
-  src: url('./fonts/Deckard-Bold.eot');
-  src: url('./fonts/Deckard-Bold.eot?#iefix') format('embedded-opentype'),
-       url('./fonts/Deckard-Bold.woff') format('woff'),
-       url('./fonts/Deckard-Bold.ttf')  format('truetype'),
-       url('./fonts/Deckard-Bold.svg#3682e6ea26a3c7e02bad5d07e55fe7de') format('svg');
+  src: url('.././fonts/Deckard-Bold.eot');
+  src: url('.././fonts/Deckard-Bold.eot?#iefix') format('embedded-opentype'),
+       url('.././fonts/Deckard-Bold.woff') format('woff'),
+       url('.././fonts/Deckard-Bold.ttf')  format('truetype'),
+       url('.././fonts/Deckard-Bold.svg#3682e6ea26a3c7e02bad5d07e55fe7de') format('svg');
   font-style: normal;
   font-weight: 700;
 }
@@ -106,10 +106,14 @@ strong, b { font-weight: 700; }
 	color: white;
 	height: 600px;
 	-webkit-font-smoothing: antialiased;
+	@media (max-width: $phone) { 
+		padding: 6vw 15vw 8vw 7vw;
+		height: 400px;
+	}
 	h2 {
 		font: 34px/43px $sans;
 		@media (max-width: $phone) { 
-			font: 28px/36px $sans;
+			font: 20px/26px $sans;
 		}
 		span {
 			position: relative;
@@ -149,16 +153,21 @@ strong, b { font-weight: 700; }
 		cursor: pointer;
 		position: relative;
 		font-feature-settings: "onum";
-		&:hover {
-			// padding-left: 8vw;
-			span.category {
-				margin-left: 10px;
-			}
-			span.title {
-				margin-left: 30px;
-			}
-			span.date {
-				margin-left: 60px;
+		@media (max-width: $phone) {
+			width: 100%;
+		}
+		@media (min-width: $phone) {
+			&:hover {
+				// padding-left: 8vw;
+				span.category {
+					margin-left: 10px;
+				}
+				span.title {
+					margin-left: 30px;
+				}
+				span.date {
+					margin-left: 60px;
+				}
 			}
 		}
 		a {
@@ -168,10 +177,16 @@ strong, b { font-weight: 700; }
 			transition: all $soft .3s;
 			padding-bottom: 80px;
 			color: black;
+			@media (max-width: $phone) {
+				width: 100%;
+			}
 			h3 {
 				font-weight: normal;
 				font: 34px/39px $sans;
 				transition: all $soft .3s;
+				@media (max-width: $phone) {
+					font: 28px/34px $sans;
+				}
 			}
 			.category {
 				display: inline-block;
@@ -189,6 +204,9 @@ strong, b { font-weight: 700; }
 				font: 36px/39px $serif;
 				transition: all $soft .3s;
 				-webkit-font-feature-settings: 'onum';
+				@media (max-width: $phone) {
+					font: 30px/36px $sans;
+				}
 			}
 		}
 	}
@@ -268,6 +286,6 @@ strong, b { font-weight: 700; }
 	right: 100%;
 	width: 100%;
 	@media (max-width: $phone) {
-		min-height: 100vh;
+		height: 400px;
 	}
 }
