@@ -97,13 +97,13 @@ strong, b {
     .menubutton {
       top: 30px;
       right: 30px; } }
-  .menubutton:hover {
+  .menubutton:hover, .menubutton:focus {
     cursor: url("img/i.png") 20 20, auto;
     transform: scale(2) translateZ(0px);
     opacity: 1; }
   .menubutton.active {
     background: #ff3b3b; }
-  .menubutton.active:hover {
+  .menubutton.active:hover, .menubutton.active:focus {
     cursor: url("img/i-w.png") 20 20, auto;
     transform: scale(2) translateZ(0px);
     opacity: 1; }
@@ -138,9 +138,9 @@ strong, b {
         position: absolute;
         margin-top: -7px;
         transition: all cubic-bezier(0.77, 0, 0.175, 1) 0.5s; }
-      .intro h2 span:hover {
+      .intro h2 span:hover, .intro h2 span:focus {
         cursor: pointer; }
-        .intro h2 span:hover:after {
+        .intro h2 span:hover:after, .intro h2 span:focus:after {
           height: 4px;
           margin-top: -7px;
           background: rgba(255, 255, 255, 0.5); }

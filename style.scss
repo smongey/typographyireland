@@ -107,7 +107,7 @@ strong, b { font-weight: 700; }
 		top: 30px;
 		right: 30px;
 	}
-	&:hover {
+	&:hover, &:focus  {
 		cursor: url('img/i.png') 20 20, auto;
 		transform: scale(2) translateZ(0px);
 		opacity: 1;
@@ -115,7 +115,7 @@ strong, b { font-weight: 700; }
 	&.active {
 		background: $col;
 	}
-	&.active:hover {
+	&.active:hover, &.active:focus {
 		cursor: url('img/i-w.png') 20 20, auto;
 		transform: scale(2) translateZ(0px);
 		opacity: 1;
@@ -154,7 +154,7 @@ strong, b { font-weight: 700; }
 				margin-top: -7px;
 				transition: all $soft .5s;
 			}
-			&:hover {
+			&:hover, &:focus {
 				cursor: pointer;
 				&:after {
 					height: 4px;
