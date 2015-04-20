@@ -5,7 +5,7 @@ app.controller('AppCtrl', ['$scope', function($scope){
 		category: 'Call for Papers',
 		title: 'Face Forward International Typography Conference',
 		date: '1st May 2015',
-		link: '/call-for-papers'
+		link: 'call-for-papers'
 	}, {
 		category: 'Lecture',
 		title: 'Designing typefaces across the Atlantic — Paul Barnes (Commercial Type)',
