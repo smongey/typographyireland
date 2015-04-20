@@ -3,11 +3,11 @@
 
 @font-face {
   font-family: 'Deckard-Bold';
-  src: url('../fonts/Deckard-Bold.eot');
-  src: url('../fonts/Deckard-Bold.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Deckard-Bold.woff') format('woff'),
-       url('../fonts/Deckard-Bold.ttf')  format('truetype'),
-       url('../fonts/Deckard-Bold.svg#3682e6ea26a3c7e02bad5d07e55fe7de') format('svg');
+  src: url('./fonts/Deckard-Bold.eot');
+  src: url('./fonts/Deckard-Bold.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/Deckard-Bold.woff') format('woff'),
+       url('./fonts/Deckard-Bold.ttf')  format('truetype'),
+       url('./fonts/Deckard-Bold.svg#3682e6ea26a3c7e02bad5d07e55fe7de') format('svg');
   font-style: normal;
   font-weight: 700;
 }
@@ -85,7 +85,7 @@ strong, b { font-weight: 700; }
 	animation: popHover .5s infinite;
 	animation-play-state: paused; 
 	&:hover {
-		cursor: url('../img/i.png') 20 20, auto;
+		cursor: url('./img/i.png') 20 20, auto;
 		transform: scale(2) translateZ(0px);
 		opacity: 1;
 	}
@@ -93,7 +93,7 @@ strong, b { font-weight: 700; }
 		background: $col;
 	}
 	&.active:hover {
-		cursor: url('../img/i-w.png') 20 20, auto;
+		cursor: url('./img/i-w.png') 20 20, auto;
 		transform: scale(2) translateZ(0px);
 		opacity: 1;
 	}
