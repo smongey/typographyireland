@@ -3,7 +3,7 @@
 var noise = window.noise;
 noise.seed(Math.random());
 
-var svg = ['svgA', 'svgB', 'svgC'];
+var svg = ['svgA', 'svgB', 'svgC', 'svgG', 'svgX'];
 
 // var rand = Math.floor(Math.random() * svg.length);
 // console.log(rand);
