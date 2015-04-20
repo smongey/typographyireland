@@ -17,25 +17,45 @@ app.controller('AppCtrl', ['$scope', function($scope){
 		date: '27th March 2015',
 		link: 'https://www.facebook.com/TypographyIreland/posts/951178238255577'
 	},{
-		category: 'Exhibition',
-		title: 'Exquisite Editions',
-		date: '4th March 2015',
-		link: 'https://www.facebook.com/events/857523434305218/'
-	},{
 		category: 'Lecture',
-		title: 'Veronika Burian & José Scaglione (TypeTogether) ',
+		title: 'Type You Can Read',
 		date: '20th February 2015',
 		link: 'https://www.facebook.com/TypographyIreland/posts/933757076664360'
 	},{
 		category: 'Lecture',
-		title: 'Fernanda Groetaers / David Meaney',
+		title: 'Stuck in the Past',
 		date: '23rd February 2015',
 		link: 'https://www.facebook.com/TypographyIreland/photos/a.143934495646626.17757.138462212860521/921179134588821/'
 	},{
 		category: 'Workshop',
-		title: 'Type Design with TypeTogether ',
+		title: 'TypeTogether Typeface Design',
 		date: '20th–22nd February 2015',
 		link: 'https://www.facebook.com/TypographyIreland/posts/920801937959874'
+	}, {
+		category: 'Lecture',
+		title: 'From sound to glyph: the typographic representation of languages',
+		date: '20th October 2014',
+		link: 'https://www.facebook.com/TypographyIreland/photos/a.143934495646626.17757.138462212860521/864807033559365/'
+	}, {
+		category: 'Workshop',
+		title: 'An introduction to multi-script typography',
+		date: '24th–26th October 2014',
+		link: 'https://www.facebook.com/TypographyIreland/photos/a.143934495646626.17757.138462212860521/863266807046721/'
+	}, {
+		category: 'Lecture',
+		title: 'Contemporary typography and typeface design',
+		date: '23rd October 2014',
+		link: 'https://www.facebook.com/TypographyIreland/photos/a.143934495646626.17757.138462212860521/860142120692523/'
+	}, {
+		category: 'Lecture',
+		title: 'Ocean Bound: Stories about Printing at Sea',
+		date: '7th March 2014',
+		link: 'https://www.facebook.com/TypographyIreland/photos/a.143934495646626.17757.138462212860521/730425273664209/'
+	}, {
+		category: 'Lecture',
+		title: 'Groping for the Light Switch: A Novelist&rsquo;s Guide to Type Design',
+		date: '7th March 2014',
+		link: 'https://www.facebook.com/TypographyIreland/photos/a.143934495646626.17757.138462212860521/714383651935038/'
 	}];
 }]);
 

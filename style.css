@@ -10,7 +10,15 @@
   font-style: normal;
   font-weight: 700; }
 body, html {
-  font: 22px/25px "ff-spinoza-web-pro", serif; }
+  font: 22px/25px "ff-spinoza-web-pro", serif;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+  -ms-font-feature-settings: "kern";
+  -o-font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  font-feature-settings: "kern";
+  font-kerning: normal; }
 
 em, i {
   font-style: italic; }

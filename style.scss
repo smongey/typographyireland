@@ -20,7 +20,17 @@ $soft: cubic-bezier(0.770, 0.000, 0.175, 1.000);
 $phone: 480px;
 $tablet: 820px;
 
-body, html { font: 22px/25px $serif; }
+body, html { 
+	font: 22px/25px $serif; 
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern=1";
+	-ms-font-feature-settings: "kern";
+	-o-font-feature-settings: "kern";
+	-webkit-font-feature-settings: "kern";
+	font-feature-settings: "kern";
+	font-kerning: normal;
+}
 em, i { font-style: italic; }
 strong, b { font-weight: 700; }
 ::-moz-selection { background: $col; color: white; }
