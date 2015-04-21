@@ -3,7 +3,7 @@
 var noise = window.noise;
 noise.seed(Math.random());
 
-var svg = ['svgA', 'svgB', 'svgC', 'svgG', 'svgX'];
+var svg = ['svgA', 'svgB', 'svgC', 'svgD', 'svgG', 'svgM', 'svgN', 'svgW', 'svgV', 'svgX'];
 
 // var rand = Math.floor(Math.random() * svg.length);
 // console.log(rand);
@@ -21,7 +21,12 @@ function pickLetter() {
     a.position.y = view.center.y;
     a.scale(1.8);
     //a.selected = true;
-    paths = a.children[0].children[0].children;
+    if (a.children[0].children[0].children) {
+        paths = a.children[0].children[0].children;
+    } else {
+        paths = a.children[0].children;
+    }
+    
     return a, paths;
 }
 
@@ -105,8 +110,8 @@ function onFrame(){
         var perlinX = noise.perlin2(noiseCounter + segment.noiseStart, 0);
         var perlinY = noise.perlin2(0, noiseCounter + segment.noiseStart);
         
-        segment.point.x = segment.originalPosition.x + (perlinX * ( ( (m.x / (window.innerWidth / 2) - .58 ) * 700)));
-        segment.point.y = segment.originalPosition.y + (perlinY * ( ( (m.y / window.innerHeight - .58 ) * 700)));
+        segment.point.x = segment.originalPosition.x + (perlinX * ( ( (m.x / (window.innerWidth / 2) - .5 ) * 700)));
+        segment.point.y = segment.originalPosition.y + (perlinY * ( ( (m.y / window.innerHeight - .5 ) * 700)));
         //segment.point.y += (perlin.y - .5 ) * (( m.y / window.innerHeight ) * 20);
         
     }, function(path){
