@@ -3,7 +3,7 @@
 var noise = window.noise;
 noise.seed(Math.random());
 
-var svg = ['svgA', 'svgB', 'svgC', 'svgD', 'svgE', 'svgG', 'svgH', 'svgI', 'svgJ', 'svgK', 'svgM', 'svgN', 'svgO', 'svgP', 'svgQ', 'svgR', 'svgS', 'svgW', 'svgV', 'svgX', 'svgZ'];
+var svg = ['svgA', 'svgB', 'svgC', 'svgD', 'svgE', 'svgF', 'svgG', 'svgH', 'svgI', 'svgJ', 'svgK', 'svgL', 'svgM', 'svgN', 'svgO', 'svgP', 'svgQ', 'svgR', 'svgS', 'svgT', 'svgU',  'svgV', 'svgW', 'svgX', 'svgY', 'svgZ',];
 
 // var rand = Math.floor(Math.random() * svg.length);
 // console.log(rand);
@@ -17,7 +17,11 @@ function pickLetter() {
     a.visible = true; // Turn off the effect of display:none;
     a.fillColor = 'white';
     a.opacity = 1;
-    a.position.x = view.center.x - view.bounds.width / 4;
+    if (window.innerWidth < 768 ) {
+        a.position.x = view.center.x;
+    } else {
+        a.position.x = view.center.x - view.bounds.width / 4;
+    };
     a.position.y = view.center.y;
     a.scale(1.8);
     //a.selected = true;

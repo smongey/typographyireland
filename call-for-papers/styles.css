@@ -91,10 +91,53 @@
         .break-bottom { padding-bottom:26px; }
         .break-bottom-2 { padding-bottom:52px; }
         
-        .nimbus, .nimbus p {
+        .deckard, .deckard p {
             font-family: "Deckard-Bold",sans-serif;
             font-weight: 300;
         }
         #c {
             background: black;
         }
+
+        @media only screen and (max-width: 767px) {
+
+            #c {
+                width:100%;
+                position: fixed;
+                top:0;
+            }
+            
+            section {
+                position:absolute;
+                width:100%;
+                right:0;
+                top:0%;
+                margin-bottom:700px;
+                padding:32px;
+                z-index:100;
+                background:white;
+                color:black;
+            }
+
+            p, ul {
+                font:16px/24px "ff-spinoza-web-pro", Times, serif;
+                text-indent:24px;
+            }
+            
+            h1, .deckard, .deckard p {
+                font:16px/24px "Deckard-Bold",sans-serif;
+            }
+
+            .indent {
+                text-indent:24px;
+            }
+            
+            .margin-indent {
+                margin-left:24px;
+            }
+
+            .break-top { padding-top:26px; }
+            .break-top-2 { padding-top:32px; }
+            .break-bottom { padding-bottom:26px; }
+            .break-bottom-2 { padding-bottom:52px; }
+}
