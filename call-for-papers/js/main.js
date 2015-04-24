@@ -3,8 +3,7 @@
 var noise = window.noise;
 noise.seed(Math.random());
 
-var svg = ['svgA', 'svgB', 'svgC', 'svgD', 'svgG', 'svgH', 'svgI', 'svgJ', 'svgK', 'svgM', 'svgN', 'svgW', 'svgV', 'svgX', 'svgZ'];
-
+var svg = ['svgA', 'svgB', 'svgC', 'svgD', 'svgE', 'svgF', 'svgG', 'svgH', 'svgI', 'svgJ', 'svgK', 'svgL', 'svgM', 'svgN', 'svgO', 'svgP', 'svgQ', 'svgR', 'svgS', 'svgT', 'svgU',  'svgV', 'svgW', 'svgX', 'svgY', 'svgZ',];
 // var rand = Math.floor(Math.random() * svg.length);
 // console.log(rand);
 
