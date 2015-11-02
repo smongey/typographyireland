@@ -90,6 +90,8 @@
 
 
 <script src="three.js"></script>
+<script src="canvasrenderer.js"></script>
+<script src="projector.js"></script>
 
 <script>
 	
@@ -99,8 +101,8 @@
 	var geometry1 = new THREE.BoxGeometry( 1, 12.5, 1 );
 	var geometry2 = new THREE.BoxGeometry( 6, 1, 1 );
 
-	var material1 = new THREE.MeshBasicMaterial( { color: 0x000000 } );
-	var material2 = new THREE.MeshBasicMaterial( { color: 0xFFFFFF } );
+	var material1 = new THREE.MeshBasicMaterial( { color: 0x000000, overdraw: true } );
+	var material2 = new THREE.MeshBasicMaterial( { color: 0xFFFFFF, overdraw: true } );
 
 	var line1 = new THREE.Mesh( geometry1, material2 );
 	var line2 = new THREE.Mesh( geometry1, material2 );
@@ -146,7 +148,7 @@
 	// camera.position.x = -0.3;
 
 
-	var renderer = new THREE.WebGLRenderer();
+	var renderer = new THREE.CanvasRenderer();
 	renderer.setClearColor( 0x0000FF, 1);
 	renderer.setSize( (window.innerWidth / 2), window.innerHeight );
 	document.body.appendChild( renderer.domElement );
