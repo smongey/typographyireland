@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Face Forward</title>
+
+
+
+	<link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+	
+	
+
+    <section>
+    <div class="wrap">
+        <h1 class="break-top-2">Registration for Face Forward now open</h1>
+        <p>
+            <i>Face Forward</i> is an international peer-reviewed conference focused on typography that seeks to examine design and typographic practice, and to make explicit existing connections between craft, research, theory, history, criticism and pedagogy. This conference aims to provoke informed, rigorous and critical debate on aspects of typographic research and practice that relate to current discourse and contexts. It is the inaugural event in what will become an annual international conference. This year&rsquo;s conference is supported by ID2015 Year of Irish Design and the Dublin Institute of Technology.
+        </p>
+        <p>
+            In the field of visual communication and typographic practice, a great deal of epistemological uncertainty still exists. As a consequence, concrete theoretical or methodological positions around which the discipline could cohere have yet to emerge—a situation this conference seeks to address.       
+        </p>
+        <p>
+            The conference will provide a forum for research into typographic production, representation, dissemination and use. It encourages interdisciplinary enquiry; thus we welcome papers dealing with typography in all its forms, material and immaterial. We encourage submissions that consider typography in as broad a sense as possible, that celebrate the vitality and range of typography and which seek to expand definitions of both typographic object and practice. 
+        </p>
+        <p>
+            Suggested themes for papers include (but are not limited to): contemporary thinking about typography; the role and relationship of typography to cultural memory; the materiality of typography; type and language; endangered practice; post-digital typography.       
+        </p>
+        <p>
+            In addition to the main tracks, the conference will also feature a dedicated student strand and we are interested in submissions from postgraduate and undergraduate students from all disciplines.
+        </p>
+        
+        <p>
+            Presentations will be of 30 minutes duration. Proposals should include a title, an abstract of maximum 400 words and a biography of 150 words. All abstracts will be peer reviewed by an international panel and successful papers will be invited to submit to a subsequent peer-reviewed publication.       
+        </p>
+        
+        <p class="break-bottom">
+            <a href="https://easychair.org/conferences/?conf=ffd2015" target="_blank">Submission is via Easychair.  Please insert both abstract and bio into the “abstracts” field.</a>
+        </p>
+        
+            <p class="break-top-2 indent">Deadline for abstracts: May 1, 2015.</p>
+            <p class="break-bottom-2">Notification: May 29, 2015</p>
+
+            <ul class="break-top break-bottom">
+                <li class="deckard indent break-bottom">Panel members include:</li>
+                <li>Adrian Shaughnessy (Royal College of Art)</em></li>
+                <li>Brenda Dermody (Dublin Institute of Technology)</li>
+                <li>Catherine Dixon (Central Saint Martins)</li>
+                <li>Clare Bell (Dublin Institute of Technology)</li>
+                <li>Daniel Rhatigan (Monotype)</li>
+                <li>Fiona Ross (University of Reading)</li>
+                <li>Jo de Baerdemaeker (LUCA Sint Lukas Brussels/Plantin Institute for Typography)</li>
+                <li>John Hudson (Tiro Typeworks)</li>
+                <li>John McMillan (ISTD, University of Ulster)</li>
+                <li>Mary Ann Bolger (Dublin Institute of Technology)</li>
+                <li>Max Phillips (Signal Type)</li>
+                <li>Rathna Ramanathan (Royal College of Art)</li>
+                <li>Liam McComish (University of Ulster)</li>
+            </ul>
+               
+            <p class="break-top-2 indent">December 11 &amp; 12, 2015.</p>
+            <p class="no-indent break-top break-bottom-2 margin-indent">Dublin School of Creative Arts, <br>Dublin Institute of Technology, <br>Grangegorman, Dublin 7</p>
+            <p class="no-indent break-top break-bottom-2">Please email any queries to: <a href="mailto:faceforwarddublin@gmail.com">faceforwarddublin@gmail.com</a></p>
+            
+
+          
+            <small class="break-top-2 margin-indent">
+
+               Page by <a href="http://bong.international" target="_blank">BONG</a>.
+               <span class="various" href="#">Letters by various
+                  <ul>
+                    <li>A, D, G, I, K, P, X &mdash; <a href="#">Bobby Tannam</a></li>
+                    <li>B, F, L, Y, Z &mdash; <a href="#">Max Phillips</a></li>
+                    <li>C, V &mdash; <a href="#">Steve O Connell & Simon Sweeney</a></li>
+                    <li>H, M, S &mdash; <a href="#">Simon Sweeney</a></li>
+                    <li>E, J, N, Q, R, W &mdash; <a href="#">Seán Mongey</a></li>
+                    <li>O &mdash; <a href="#">Shauna Buckley</a></li>
+                    <li>T, U &mdash; <a href="#">Naoise Ó Conchubhair</a></li>
+                 
+                  </ul>
+               </span>
+            </small>
+
+    </div>
+
+    </section>
+
+
+<script src="three.js"></script>
+
+<script>
+	
+	var scene = new THREE.Scene();
+	var camera = new THREE.PerspectiveCamera( 75, (window.innerWidth / 2) / window.innerHeight, 0.1, 1000 );
+
+	var geometry1 = new THREE.BoxGeometry( 1, 12.5, 1 );
+	var geometry2 = new THREE.BoxGeometry( 6, 1, 1 );
+
+	var material1 = new THREE.MeshBasicMaterial( { color: 0x000000 } );
+	var material2 = new THREE.MeshBasicMaterial( { color: 0xFFFFFF } );
+
+	var line1 = new THREE.Mesh( geometry1, material2 );
+	var line2 = new THREE.Mesh( geometry1, material2 );
+	var line3 = new THREE.Mesh( geometry1, material1 );
+	var line4 = new THREE.Mesh( geometry1, material1 );
+
+	var cross1 = new THREE.Mesh( geometry2, material1 );
+	var cross2 = new THREE.Mesh( geometry2, material1 );
+	var cross3 = new THREE.Mesh( geometry2, material2 );
+	var cross4 = new THREE.Mesh( geometry2, material2 );
+
+	line1.position.set( -1.35, 0, -0.25 );
+
+	line2.position.set( 1, 0, -58 );
+	line2.scale.set( 2.3,2.3,80 );
+
+	line3.position.set( -2.6, 0, 7 );
+	line3.scale.set( 0.5,0.5,0.5);
+
+	line4.position.set( -16.5, 0, -59 );
+	line4.scale.set( 5,5,10 );
+	// line4.rotation.y = 0.2;
+
+	cross1.position.set( 1.8, 2.4, 8 );
+	cross1.scale.set( 0.45,0.45,0.45 );
+
+	cross2.position.set( 3.9, 3.25, 1 );
+
+	cross3.position.set( 0.4, 0.135, 12.6 );
+	cross3.scale.set( 0.1,0.1,0.1 );
+
+	cross4.position.set( 3.95, -0.75, -14.5 );
+	cross4.scale.set( 1,1,30 );
+
+
+	scene.add( line1, line2, line3, line4, cross1, cross2, cross3, cross4 );
+
+	camera.position.z = 14;
+	camera.position.x = 0;
+
+
+	// camera.rotation.y = -0.3;
+	// camera.position.x = -0.3;
+
+
+	var renderer = new THREE.WebGLRenderer();
+	renderer.setClearColor( 0x0000FF, 1);
+	renderer.setSize( (window.innerWidth / 2), window.innerHeight );
+	document.body.appendChild( renderer.domElement );
+	document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+
+	function onDocumentMouseMove( event ) {
+
+		event.preventDefault();
+
+		mouseX = ((event.clientX / (window.innerWidth / 2)) * 2) -1;
+        mouseY = ((event.clientY / window.innerHeight) * 2) -1;
+
+
+        camera.position.x = mouseX * 10;
+        camera.position.y = -mouseY * 10;
+
+        camera.rotation.y = mouseX/100;
+
+	}
+
+
+
+	function render() {
+
+		requestAnimationFrame( render );
+		renderer.render( scene, camera );
+	
+	}
+	render();
+</script>
+
+</body>
+</html>
+
