@@ -2,11 +2,31 @@ var app = angular.module('typirl', []);
 
 app.controller('AppCtrl', ['$scope', function($scope){
 	$scope.events = [{
-		category: 'Call for Papers',
+		category: 'Symposium',
+		title: 'Green Sleeves: Design and Music Symposium',
+		date: '5th May 2017',
+		link: 'files/Green-Sleeves-provisional-programme.pdf'
+	},{
+		category: 'Publication of Papers',
+		title: 'Face Forward International Typography Conference 2015',
+		date: 'Expression of interest by 30th January 2017',
+		link: 'publication-of-papers'
+	},{
+		category: 'Workshop',
+		title: 'Type Together | Typeface Design Workshop',
+		date: '18 – 20th November 2016',
+		link: 'https://www.facebook.com/events/1584676551840251/'
+	},{
+		category: 'Conference',
+		title: 'Face Forward Dublin 2015 — Programme Schedule Now Available',
+		date: '11 – 12th December 2015',
+		link: 'http://faceforward.typography.ie'
+	},{
+		category: 'Call for Papers (Extended Deadline)',
 		title: 'Face Forward International Typography Conference',
-		date: '1st May 2015',
+		date: 'Deadline for abstracts now 11th May 2015',
 		link: 'call-for-papers'
-	}, {
+	},{
 		category: 'Lecture',
 		title: 'Designing typefaces across the Atlantic — Paul Barnes (Commercial Type)',
 		date: '6th May 2015',
